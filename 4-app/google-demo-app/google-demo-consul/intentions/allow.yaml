@@ -1,0 +1,157 @@
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: productcatalogservice
+# Allow traffic from checkoutservice to productcatalogservice
+spec:
+  destination:
+    name: productcatalogservice
+  sources:
+    - name: checkoutservice
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: shippingservice
+# Allow traffic from checkoutservice to shippingservice
+spec:
+  destination:
+    name: shippingservice
+  sources:
+    - name: checkoutservice
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: paymentservice
+# Allow traffic from checkoutservice to paymentservice
+spec:
+  destination:
+    name: paymentservice
+  sources:
+    - name: checkoutservice
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: emailservice
+# Allow traffic from checkoutservice to emailservice
+spec:
+  destination:
+    name: emailservice
+  sources:
+    - name: checkoutservice
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: currencyservice
+# Allow traffic from checkoutservice to currencyservice
+spec:
+  destination:
+    name: currencyservice
+  sources:
+    - name: checkoutservice
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: cartservice
+# Allow traffic from checkoutservice to cartservice
+spec:
+  destination:
+    name: cartservice
+  sources:
+    - name: checkoutservice
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: productcatalogservice
+# Allow traffic from frontend to productcatalogservice
+spec:
+  destination:
+    name: productcatalogservice
+  sources:
+    - name: frontend
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: currencyservice
+# Allow traffic from frontend to currencyservice
+spec:
+  destination:
+    name: currencyservice
+  sources:
+    - name: frontend
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: cartservice
+# Allow traffic from frontend to cartservice
+spec:
+  destination:
+    name: cartservice
+  sources:
+    - name: frontend
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: recommendationservice
+# Allow traffic from frontend to recommendationservice
+spec:
+  destination:
+    name: recommendationservice
+  sources:
+    - name: frontend
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: shippingservice
+# Allow traffic from frontend to shippingservice
+spec:
+  destination:
+    name: shippingservice
+  sources:
+    - name: frontend
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: checkoutservice
+# Allow traffic from frontend to checkoutservice
+spec:
+  destination:
+    name: checkoutservice
+  sources:
+    - name: frontend
+      action: allow
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: adservice
+# Allow traffic from frontend to adservice
+spec:
+  destination:
+    name: adservice
+  sources:
+    - name: frontend
+      action: allow
+---

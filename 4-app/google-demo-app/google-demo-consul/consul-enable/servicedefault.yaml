@@ -1,0 +1,64 @@
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: frontend
+spec:
+  mutualTLSMode: "permissive"
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: productcatalogservice
+spec:
+  mutualTLSMode: "permissive"
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: currencyservice
+spec:
+  mutualTLSMode: "permissive"
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: cartservice
+spec:
+  mutualTLSMode: "permissive"
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: recommendationservice
+spec:
+  mutualTLSMode: "permissive"
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: shippingservice
+spec:
+  mutualTLSMode: "permissive"
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: checkoutservice
+spec:
+  mutualTLSMode: "permissive"
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: adservice
+spec:
+  mutualTLSMode: "permissive"
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceDefaults
+metadata:
+  name: frontend-external
+
+spec:
+  mutualTLSMode: "permissive"
+---

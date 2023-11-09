@@ -19,7 +19,7 @@ spec:
         app: frontend
       annotations: # CONSUL
         consul.hashicorp.com/connect-inject: 'true' # CONSUL
-        consul.hashicorp.com/transparent-proxy: 'false' # CONSUL
+        #consul.hashicorp.com/transparent-proxy: 'false' # CONSUL
         consul.hashicorp.com/connect-service-upstreams: 'productcatalogservice:3550, currencyservice:7000, cartservice:7070, recommendationservice:8080, shippingservice:50052, checkoutservice:5050, adservice:9555' # CONSUL
     spec:
       serviceAccountName: frontend

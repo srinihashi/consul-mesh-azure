@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -17,7 +18,7 @@ spec:
       labels:
         app: currencyservice
       annotations: # CONSUL 
-        #consul.hashicorp.com/connect-inject: 'true' # CONSUL
+        consul.hashicorp.com/connect-inject: 'true' # CONSUL
     spec:
       serviceAccountName: currencyservice
       containers:

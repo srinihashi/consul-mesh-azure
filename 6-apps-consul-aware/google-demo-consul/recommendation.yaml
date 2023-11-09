@@ -17,7 +17,7 @@ spec:
       labels:
         app: recommendationservice
       annotations: # CONSUL
-        #consul.hashicorp.com/connect-inject: 'true' # CONSUL
+        consul.hashicorp.com/connect-inject: 'true' # CONSUL
         consul.hashicorp.com/connect-service-upstreams: 'productcatalogservice:3550' # CONSUL
     spec:
       serviceAccountName: recommendationservice
@@ -47,5 +47,4 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 8080
-
 ---

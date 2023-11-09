@@ -17,7 +17,8 @@ spec:
       labels:
         app: cartservice
       annotations: # CONSUL
-        #consul.hashicorp.com/connect-inject: 'true' # CONSUL
+        consul.hashicorp.com/connect-inject: 'true' # CONSUL
+        consul.hashicorp.com/connect-service-upstreams: 'redis-cart:6379' # CONSUL
     spec:
       serviceAccountName: cartservice
       containers:

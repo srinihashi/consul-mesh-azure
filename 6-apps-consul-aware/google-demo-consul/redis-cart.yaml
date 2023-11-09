@@ -17,7 +17,7 @@ spec:
       labels:
         app: redis-cart
       annotations: # CONSUL
-        #consul.hashicorp.com/connect-inject: 'true' # CONSUL
+        consul.hashicorp.com/connect-inject: 'true' # CONSUL
     spec:
       serviceAccountName: redis-cart
       containers:
@@ -44,3 +44,4 @@ spec:
   - name: redis
     port: 6379
     targetPort: 6379
+---

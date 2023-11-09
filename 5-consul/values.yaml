@@ -39,7 +39,7 @@ ui:
 # Configures and installs the automatic Consul Connect sidecar injector.
 connectInject:
   enabled: true # If true, the sidecar injector will be installed.
-  default: true # If true, all pods will be injected by default.
+  default: false # If true, all pods will be injected by default.
   TransparentProxy: 
     enabled: true # If true, the sidecar will be configured to use a transparent proxy.
   
@@ -50,5 +50,5 @@ connectInject:
 #  replicas: 1 # Number of Mesh Gateway replicas to run.
 
 # Enable Controller
-controller:
-  enabled: true
+#controller:
+#  enabled: true

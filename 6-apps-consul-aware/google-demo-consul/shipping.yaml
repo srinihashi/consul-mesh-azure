@@ -17,7 +17,7 @@ spec:
       labels:
         app: shippingservice
       annotations: # CONSUL
-        #consul.hashicorp.com/connect-inject: 'true' # CONSUL
+        consul.hashicorp.com/connect-inject: 'true' # CONSUL
     spec:
       serviceAccountName: shippingservice
       containers:
@@ -43,5 +43,4 @@ spec:
   - protocol: TCP
     port: 50052
     targetPort: 50052
-
 ---

@@ -17,7 +17,7 @@ spec:
       labels:
         app: paymentservice
       annotations: # CONSUL
-        #consul.hashicorp.com/connect-inject: 'true' #CONSUL
+        consul.hashicorp.com/connect-inject: 'true' #CONSUL
     spec:
       serviceAccountName: paymentservice
       containers:
@@ -43,5 +43,4 @@ spec:
   - protocol: TCP
     port: 50051
     targetPort: 50051
-
 ---

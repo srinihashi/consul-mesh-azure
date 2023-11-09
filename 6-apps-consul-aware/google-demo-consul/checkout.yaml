@@ -17,7 +17,7 @@ spec:
       labels:
         app: checkoutservice
       annotations: # CONSUL
-        #consul.hashicorp.com/connect-inject: 'true' # CONSUL
+        consul.hashicorp.com/connect-inject: 'true' # CONSUL
         consul.hashicorp.com/connect-service-upstreams: 'productcatalogservice:3550,shippingservice:50052,paymentservice:50051,emailservice:5000,currencyservice:7000,cartservice:7070' # CONSUL
     spec:
       serviceAccountName: checkoutservice

@@ -51,5 +51,5 @@ meshGateway:
     enabled: true # If true, Mesh Gateways will be configured to peer with each other.
 
 # Enable Controller
-controller:
-  enabled: true
+#controller:
+#  enabled: true

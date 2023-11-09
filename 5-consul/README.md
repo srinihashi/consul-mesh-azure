@@ -2,7 +2,7 @@
 
 ## Connect to AKS
 ```
-kubectl config use-context eks
+kubectl config use-context aks
 ```
 
 ## Create a namespace (consul) to deploy the Consul Control Plane

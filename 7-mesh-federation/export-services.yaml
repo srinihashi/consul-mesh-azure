@@ -7,3 +7,6 @@ spec:
     - name: "shippingservice"
       consumers:
         - peer: "eks"
+    - name: "paymentservice"
+      consumers:
+        - peer: "eks"

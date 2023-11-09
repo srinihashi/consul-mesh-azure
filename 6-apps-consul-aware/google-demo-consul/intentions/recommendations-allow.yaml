@@ -1,0 +1,13 @@
+---
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: ServiceIntentions
+metadata:
+  name: productcatalogservice
+# Allow traffic from recommendationservice to productcatalogservice
+spec:
+  destination:
+    name: productcatalogservice
+  sources:
+    - name: recommendationservice
+      action: allow
+---

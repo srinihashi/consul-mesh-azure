@@ -1,0 +1,55 @@
+# Contains values that affect multiple components of the chart.
+global:
+  # The main enabled/disabled setting.
+  # If true, servers, clients, Consul DNS and the Consul UI will be enabled.
+  enabled: true
+  # The prefix used for all resources created in the Helm chart.
+  name: consul
+  # The consul image version.
+  image: hashicorp/consul:1.16.0
+  # The name of the datacenter that the agents should register as.
+  datacenter: aks
+
+  # Enable gossip encryption
+  #gossipEncryption:
+  #  enabled: false
+
+# Enables TLS across the cluster to verify authenticity of the Consul servers and clients.
+  tls:
+    enabled: true
+ 
+  # Enables ACLs across the cluster to secure access to data and APIs.
+  acls:
+    # If true, automatically manage ACL tokens and policies for all Consul components.
+    manageSystemACLs: true
+# Configures values that configure the Consul server cluster.
+server:
+  enabled: true
+  # The number of server agents to run. This determines the fault tolerance of the cluster.
+  replicas: 1
+# Contains values that configure the Consul UI.
+ui:
+  enabled: true
+  # Registers a Kubernetes Service for the Consul UI as a LoadBalancer.
+  service:
+    enabled: true
+    type: LoadBalancer
+
+# Configures and installs the automatic Consul Connect sidecar injector.
+connectInject:
+  enabled: true # If true, the sidecar injector will be installed.
+  default: true # If true, all pods will be injected by default.
+  TransparentProxy: 
+    enabled: true # If true, the sidecar will be configured to use a transparent proxy.
+  
+
+## MeshGateway is a Consul Connect feature that allows for terminating TLS
+meshGateway:
+  enabled: true # If true, the Mesh Gateway will be installed.
+  replicas: 1 # Number of Mesh Gateway replicas to run.
+  peering:
+    enabled: true # If true, Mesh Gateways will be configured to peer with each other.
+
+# Enable Controller
+controller:
+  enabled: true

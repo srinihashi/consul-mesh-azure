@@ -10,10 +10,6 @@ global:
   # The name of the datacenter that the agents should register as.
   datacenter: aks
 
-  # Enable gossip encryption
-  #gossipEncryption:
-  #  enabled: false
-
 # Enables TLS across the cluster to verify authenticity of the Consul servers and clients.
   tls:
     enabled: true
@@ -22,6 +18,11 @@ global:
   acls:
     # If true, automatically manage ACL tokens and policies for all Consul components.
     manageSystemACLs: true
+## Enable peering between Mesh Gateways.
+#  peering:
+#    enabled: true # If true, Mesh Gateways will be configured to peer with each other.
+
+
 # Configures values that configure the Consul server cluster.
 server:
   enabled: true
@@ -44,12 +45,10 @@ connectInject:
   
 
 ## MeshGateway is a Consul Connect feature that allows for terminating TLS
-meshGateway:
-  enabled: true # If true, the Mesh Gateway will be installed.
-  replicas: 1 # Number of Mesh Gateway replicas to run.
-  peering:
-    enabled: true # If true, Mesh Gateways will be configured to peer with each other.
+#meshGateway:
+#  enabled: true # If true, the Mesh Gateway will be installed.
+#  replicas: 1 # Number of Mesh Gateway replicas to run.
 
 # Enable Controller
-#controller:
-#  enabled: true
+controller:
+  enabled: true

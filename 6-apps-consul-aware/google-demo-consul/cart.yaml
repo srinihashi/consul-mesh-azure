@@ -27,7 +27,8 @@ spec:
         - containerPort: 7070
         env:
         - name: REDIS_ADDR
-          value: "redis-cart:6379"
+          #value: "redis-cart:6379"
+          value: "localhost:6379" # CONSUL
 
 ---
 apiVersion: v1
@@ -42,5 +43,4 @@ spec:
   - protocol: TCP
     port: 7070
     targetPort: 7070
-
 ---

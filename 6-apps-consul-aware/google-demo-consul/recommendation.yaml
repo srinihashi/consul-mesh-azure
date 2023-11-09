@@ -18,7 +18,7 @@ spec:
         app: recommendationservice
       annotations: # CONSUL
         #consul.hashicorp.com/connect-inject: 'true' # CONSUL
-        #consul.hashicorp.com/connect-service-upstreams: 'productcatalogservice:3550' # CONSUL
+        consul.hashicorp.com/connect-service-upstreams: 'productcatalogservice:3550' # CONSUL
     spec:
       serviceAccountName: recommendationservice
       containers:
